@@ -41,7 +41,8 @@ public class GatherInput : MonoBehaviour
 
     private void StartMove(InputAction.CallbackContext callback)
     {
-        moveInput = callback.ReadValue<float>();
+        moveInput = Mathf.RoundToInt(callback.ReadValue<float>());
+        Debug.Log("moveInput:" + moveInput);
     }
 
     private void StopMove(InputAction.CallbackContext callback)
