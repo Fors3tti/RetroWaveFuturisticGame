@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMoveControls : MonoBehaviour
 {
-    [SerializeField]
-    private float speed;
+    [SerializeField] private float speed;
+    [SerializeField] private float jumpForce;
 
     private GatherInput gatherInput;
     private Rigidbody2D rb;
@@ -30,17 +30,27 @@ public class PlayerMoveControls : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+        Jump();
     }
 
     private void Move()
     {
         Flip();
-        rb.velocity = new Vector2(speed * gatherInput.valueX, rb.velocity.y);
+        rb.velocity = new Vector2(speed * gatherInput.moveInput, rb.velocity.y);
+    }
+
+    private void Jump()
+    {
+        if (gatherInput.jumpInput)
+        {
+            rb.velocity = new Vector2(gatherInput.moveInput * speed, jumpForce);
+        }
+        gatherInput.jumpInput = false;
     }
 
     private void Flip()
     {
-        if(gatherInput.valueX * direction < 0)
+        if(gatherInput.moveInput * direction < 0)
         {
             transform.localScale = new Vector3(-transform.localScale.x, 1, 1);
             direction *= -1;
