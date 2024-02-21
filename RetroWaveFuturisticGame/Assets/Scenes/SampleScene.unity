@@ -7600,7 +7600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 592240269}
   m_Layer: 0
-  m_Name: -----BACKGROUNDIMAGE-----
+  m_Name: ----------BGIMAGE-----------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16224,11 +16224,11 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1349856233}
   - {fileID: 44319627}
+  - {fileID: 1231077977}
+  - {fileID: 830874960}
   - {fileID: 1232245736}
   - {fileID: 1698584057}
   - {fileID: 592240269}
   - {fileID: 246664164}
   - {fileID: 1827779401}
   - {fileID: 1595018957}
-  - {fileID: 1231077977}
-  - {fileID: 830874960}
