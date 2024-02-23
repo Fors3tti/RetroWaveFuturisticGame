@@ -14,6 +14,8 @@ public class Money : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            collision.GetComponent<PlayerCollectables>().MoneyCollected();
+
             GetComponent<AudioSource>().Play();
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<CircleCollider2D>().enabled = false;

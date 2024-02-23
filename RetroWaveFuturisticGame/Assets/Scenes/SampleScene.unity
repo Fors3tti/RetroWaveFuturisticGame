@@ -13953,6 +13953,7 @@ GameObject:
   - component: {fileID: 830874964}
   - component: {fileID: 830874965}
   - component: {fileID: 830874966}
+  - component: {fileID: 830874967}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -14176,6 +14177,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &830874967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830874958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f08ce499f0d5d4192e202129cfbbb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyNumber: 0
 --- !u!1 &961440101
 GameObject:
   m_ObjectHideFlags: 0
@@ -15259,8 +15273,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 00
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fdbeaf59504984f4aa49937b858da38a, type: 2}
-  m_sharedMaterial: {fileID: -8179611336344829155, guid: fdbeaf59504984f4aa49937b858da38a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8b3816ff5d189504bb6acdc923ec9e0f, type: 2}
+  m_sharedMaterial: {fileID: -96941639139565657, guid: 8b3816ff5d189504bb6acdc923ec9e0f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15284,8 +15298,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -16507,7 +16521,7 @@ GameObject:
   - component: {fileID: 2000739938}
   m_Layer: 5
   m_Name: Money
-  m_TagString: Untagged
+  m_TagString: MoneyUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
