@@ -14,6 +14,7 @@ public class Money : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            GetComponent<AudioSource>().Play();
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<CircleCollider2D>().enabled = false;
             //Destroy(gameObject);
