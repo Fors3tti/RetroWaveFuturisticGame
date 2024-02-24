@@ -15866,6 +15866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   health: 0
+  canTakeDamge: 1
 --- !u!1 &1694575115
 GameObject:
   m_ObjectHideFlags: 0
