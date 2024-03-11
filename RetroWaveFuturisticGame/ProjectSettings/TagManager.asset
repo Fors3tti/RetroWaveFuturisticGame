@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MoneyUI
   - Stats
+  - HealthUI
   layers:
   - Default
   - TransparentFX

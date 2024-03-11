@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.UI;
+
 public class PlayerStats : MonoBehaviour
 {
     public float maxHealth;
@@ -12,12 +14,17 @@ public class PlayerStats : MonoBehaviour
     private Animator anim;
     private PlayerMoveControls playerMove;
 
+    private Image healthUI;
+
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponentInParent<Animator>();
         playerMove = GetComponentInParent<PlayerMoveControls>();
         health = maxHealth;
+
+        healthUI = GameObject.FindGameObjectWithTag("HealthUI").GetComponent<Image>();
+        UpdateHealthUI();
     }
 
     public void TakeDamage(float damage)
@@ -27,6 +34,8 @@ public class PlayerStats : MonoBehaviour
             health -= damage;
             anim.SetBool("Damage", true);
             playerMove.hasControl = false;
+
+            UpdateHealthUI();
 
             if (health <= 0)
             {
@@ -53,5 +62,10 @@ public class PlayerStats : MonoBehaviour
         {
             anim.SetBool("Death", true);
         }
+    }
+
+    public void UpdateHealthUI()
+    {
+        healthUI.fillAmount = health / maxHealth;
     }
 }
