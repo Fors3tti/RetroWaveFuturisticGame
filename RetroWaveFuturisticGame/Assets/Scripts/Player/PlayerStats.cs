@@ -10,11 +10,13 @@ public class PlayerStats : MonoBehaviour
     public bool canTakeDamge = true;
 
     private Animator anim;
+    private PlayerMoveControls playerMove;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponentInParent<Animator>();
+        playerMove = GetComponentInParent<PlayerMoveControls>();
         health = maxHealth;
     }
 
@@ -24,6 +26,7 @@ public class PlayerStats : MonoBehaviour
         {
             health -= damage;
             anim.SetBool("Damage", true);
+            playerMove.hasControl = false;
 
             if (health <= 0)
             {
@@ -43,6 +46,7 @@ public class PlayerStats : MonoBehaviour
         if(health > 0)
         {
             canTakeDamge = true;
+            playerMove.hasControl = true;
             anim.SetBool("Damage", false);
         }
         else

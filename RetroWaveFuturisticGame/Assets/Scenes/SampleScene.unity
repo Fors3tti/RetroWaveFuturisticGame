@@ -14157,6 +14157,7 @@ MonoBehaviour:
     m_Bits: 128
   leftPoint: {fileID: 2141222399}
   rightPoint: {fileID: 1334889321}
+  hasControl: 1
 --- !u!95 &830874966
 Animator:
   serializedVersion: 5
@@ -17022,13 +17023,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spike
       objectReference: {fileID: 0}
+    - target: {fileID: 5470247953173782999, guid: 3ab45840ea1791a43b11fe29d5ce0467, type: 3}
+      propertyPath: forceX
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5470247953173782999, guid: 3ab45840ea1791a43b11fe29d5ce0467, type: 3}
+      propertyPath: forceY
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5470247953173782999, guid: 3ab45840ea1791a43b11fe29d5ce0467, type: 3}
+      propertyPath: duration
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 7068425188071942494, guid: 3ab45840ea1791a43b11fe29d5ce0467, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -3.22
       objectReference: {fileID: 0}
     - target: {fileID: 7068425188071942494, guid: 3ab45840ea1791a43b11fe29d5ce0467, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.52
       objectReference: {fileID: 0}
     - target: {fileID: 7068425188071942494, guid: 3ab45840ea1791a43b11fe29d5ce0467, type: 3}
       propertyPath: m_LocalPosition.z
