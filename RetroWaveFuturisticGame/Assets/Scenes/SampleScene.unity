@@ -13866,7 +13866,7 @@ GameObject:
   - component: {fileID: 805784740}
   - component: {fileID: 805784739}
   m_Layer: 5
-  m_Name: HealthUI
+  m_Name: Health
   m_TagString: HealthUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14448,7 +14448,7 @@ GameObject:
   - component: {fileID: 1078047872}
   - component: {fileID: 1078047871}
   m_Layer: 5
-  m_Name: HeartUI
+  m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
