@@ -64,6 +64,16 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    public void IncreaseHealth(float heal)
+    {
+        health += heal;
+
+        if (health > maxHealth)
+            health = maxHealth;
+
+        UpdateHealthUI();
+    }
+
     public void UpdateHealthUI()
     {
         healthUI.fillAmount = health / maxHealth;

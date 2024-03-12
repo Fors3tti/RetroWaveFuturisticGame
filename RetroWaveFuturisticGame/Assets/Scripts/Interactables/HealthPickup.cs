@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class HealthPickup : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float heal;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.CompareTag("Player"))
+        {
+            PlayerStats playerStats = collision.GetComponentInChildren<PlayerStats>();
+
+            if (playerStats.health == playerStats.maxHealth)
+                return;
+
+            playerStats.IncreaseHealth(heal);
+            Destroy(gameObject);
+        }
     }
 }
