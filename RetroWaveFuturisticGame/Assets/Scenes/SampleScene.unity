@@ -16126,11 +16126,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.043800354, y: 0.6621187}
-      - {x: -0.8259154, y: -0.0038362443}
-      - {x: -0.48767227, y: -0.80901706}
-      - {x: 0.49393046, y: -0.80901694}
-      - {x: 0.8134012, y: 0.033706367}
+    - - {x: -0.019845009, y: 0.5603079}
+      - {x: -0.76602703, y: 0.0021527112}
+      - {x: -0.49964994, y: -0.7850617}
+      - {x: 0.48794186, y: -0.78506136}
+      - {x: 0.7415347, y: 0.015739739}
   m_UseDelaunayMesh: 0
 --- !u!114 &1455866596
 MonoBehaviour:
@@ -16145,6 +16145,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  forceX: 10
+  forceY: 5
+  duration: 0.15
 --- !u!1 &1529375246
 GameObject:
   m_ObjectHideFlags: 0

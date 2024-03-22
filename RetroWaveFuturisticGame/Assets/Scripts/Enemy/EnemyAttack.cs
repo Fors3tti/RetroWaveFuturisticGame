@@ -13,6 +13,13 @@ public class EnemyAttack : MonoBehaviour
         {
             playerStats = collision.GetComponent<PlayerStats>();
             playerStats.TakeDamage(damage);
+
+            SpecialAttack();
         }
+    }
+
+    public virtual void SpecialAttack()
+    {
+
     }
 }

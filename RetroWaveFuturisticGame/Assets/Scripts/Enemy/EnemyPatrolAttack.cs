@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class EnemyPatrolAttack : EnemyAttack
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    PlayerMoveControls playerMove;
+    public float forceX;
+    public float forceY;
+    public float duration;
 
-    // Update is called once per frame
-    void Update()
+    public override void SpecialAttack()
     {
-        
+        playerMove = playerStats.GetComponentInParent<PlayerMoveControls>();
+        StartCoroutine(playerMove.KnockBack(forceX, forceY, duration, transform.parent));
     }
 }
