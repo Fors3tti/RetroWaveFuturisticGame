@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    public Fader fader;
     public int lvlToLoad;
 
     // Start is called before the first frame update
@@ -20,7 +19,7 @@ public class Door : MonoBehaviour
             GetComponent<BoxCollider2D>().enabled = false;
             collision.GetComponent<GatherInput>().DisableControls();
 
-            fader.SetLevel(lvlToLoad);
+            GameManager.ManagerLoadLevel(lvlToLoad);
         }
     }
 }

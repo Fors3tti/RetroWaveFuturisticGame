@@ -12,6 +12,8 @@ public class Fader : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+
+        GameManager.RegisterFader(this);
     }
 
     public void SetLevel(int lvl)
