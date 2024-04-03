@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cdeae2f9dd4ed043898e25cb69f1d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unlockedSprite: {fileID: 1822324287, guid: 3b643921bb668164bb680f959b631850, type: 3}
   lvlToLoad: 2
 --- !u!50 &7386634065433417582
 Rigidbody2D:
@@ -134,7 +135,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4980942177503765331}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -159,7 +160,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0070548654, y: -0.26271546}
+  m_Offset: {x: 0.035289884, y: -0.26271546}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -170,5 +171,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4803058, y: 2.9034564}
+  m_Size: {x: 0.19795609, y: 2.9034564}
   m_EdgeRadius: 0

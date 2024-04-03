@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager gameManager;
     private Fader fader;
+    private Door theDoor;
 
     private void Awake()
     {
@@ -18,9 +19,12 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    void Start()
+    public static void RegisterDoor(Door door)
     {
-        
+        if (gameManager == null)
+            return;
+
+        gameManager.theDoor = door;
     }
 
     public static void RegisterFader (Fader registerFader)
