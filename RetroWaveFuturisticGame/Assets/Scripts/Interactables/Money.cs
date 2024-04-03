@@ -7,7 +7,7 @@ public class Money : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        GameManager.RegisterMoney(this);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -19,6 +19,8 @@ public class Money : MonoBehaviour
             GetComponent<AudioSource>().Play();
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<CircleCollider2D>().enabled = false;
+
+            GameManager.RemoveMoneyFromList(this);
             //Destroy(gameObject);
         }
     }

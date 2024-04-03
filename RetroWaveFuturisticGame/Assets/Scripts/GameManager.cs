@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     private static GameManager gameManager;
     private Fader fader;
     private Door theDoor;
+    private List<Money> moneys;
 
     private void Awake()
     {
@@ -17,6 +18,8 @@ public class GameManager : MonoBehaviour
         }
         else
             Destroy(gameObject);
+
+        moneys = new List<Money>();
     }
 
     public static void RegisterDoor(Door door)
@@ -48,6 +51,27 @@ public class GameManager : MonoBehaviour
         if (gameManager == null)
             return;
 
+        gameManager.moneys.Clear();
         gameManager.fader.RestartLevel();
     }
+
+    public static void RegisterMoney(Money money)
+    {
+        if (gameManager == null)
+            return;
+
+        if (!gameManager.moneys.Contains(money))
+            gameManager.moneys.Add(money);
+    }
+
+    public static void RemoveMoneyFromList(Money money)
+    {
+        if (gameManager == null)
+            return;
+
+        gameManager.moneys.Remove(money);
+        if (gameManager.moneys.Count == 0)
+            gameManager.theDoor.UnlockDoor();
+    }
+
 }
