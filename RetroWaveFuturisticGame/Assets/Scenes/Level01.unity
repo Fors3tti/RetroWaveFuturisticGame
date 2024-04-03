@@ -7734,17 +7734,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &591208640 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 867623437123578112, guid: 1229a78c3ae19d4469f9384a0d72076b, type: 3}
-  m_PrefabInstance: {fileID: 2896336713719055206}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf12377495e37504fbf31a354118d01d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &592240268
 GameObject:
   m_ObjectHideFlags: 0
@@ -17820,10 +17809,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6703328676400499936, guid: 07716924f5e71e14b9c0c49609a4bb39, type: 3}
-      propertyPath: fader
-      value: 
-      objectReference: {fileID: 591208640}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17840,6 +17825,10 @@ PrefabInstance:
     - target: {fileID: 2634534127135148268, guid: 1229a78c3ae19d4469f9384a0d72076b, type: 3}
       propertyPath: m_Name
       value: FaderCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2634534127135148268, guid: 1229a78c3ae19d4469f9384a0d72076b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3082939801386698214, guid: 1229a78c3ae19d4469f9384a0d72076b, type: 3}
       propertyPath: m_Pivot.x
