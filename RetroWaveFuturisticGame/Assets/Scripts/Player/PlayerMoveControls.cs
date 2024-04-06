@@ -23,12 +23,19 @@ public class PlayerMoveControls : MonoBehaviour
     private bool knockBack = false;
     public bool hasControl = true;
 
+    public bool onLadders;
+    public float climbSpeed;
+    public float climbHorizontalSpeed;
+
+    private float startGravity;
+
     // Start is called before the first frame update
     void Start()
     {
         gatherInput = GetComponent<GatherInput>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        startGravity = rb.gravityScale;
     }
 
     // Update is called once per frame
@@ -50,19 +57,37 @@ public class PlayerMoveControls : MonoBehaviour
     {
         Flip();
         rb.velocity = new Vector2(speed * gatherInput.moveInput, rb.velocity.y);
+        if (onLadders)
+        {
+            rb.gravityScale = 0;
+            rb.velocity = new Vector2(climbHorizontalSpeed * gatherInput.moveInput, climbSpeed * gatherInput.climbInput);
+            if (rb.velocity.y == 0)
+                anim.enabled = false;
+            else
+                anim.enabled = true;
+        }
+    }
+
+    public void ExitLadders()
+    {
+        rb.gravityScale = startGravity;
+        onLadders = false;
+        anim.enabled = true;
     }
 
     private void Jump()
     {
         if (gatherInput.jumpInput)
         {
-            if (grounded)
+            if (grounded || onLadders)
             {
+                ExitLadders();
                 rb.velocity = new Vector2(gatherInput.moveInput * speed, jumpForce);
                 doubleJump = true;
             }
             else if (doubleJump)
             {
+                ExitLadders();
                 rb.velocity = new Vector2(gatherInput.moveInput * speed, jumpForce);
                 doubleJump = false;
             }
@@ -110,6 +135,7 @@ public class PlayerMoveControls : MonoBehaviour
         anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         anim.SetFloat("JumpSpeed", rb.velocity.y);
         anim.SetBool("Grounded", grounded);
+        anim.SetBool("Climb", onLadders);
     }
 
     public IEnumerator KnockBack(float forceX, float forceY, float duration, Transform otherObject)
