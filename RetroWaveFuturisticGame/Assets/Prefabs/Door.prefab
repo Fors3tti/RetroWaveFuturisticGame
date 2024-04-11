@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockedSprite: {fileID: 1822324287, guid: 3b643921bb668164bb680f959b631850, type: 3}
-  lvlToLoad: 2
+  lvlToLoad: 8
 --- !u!50 &7386634065433417582
 Rigidbody2D:
   serializedVersion: 4
