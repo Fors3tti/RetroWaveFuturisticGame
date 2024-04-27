@@ -36,4 +36,9 @@ public class Fader : MonoBehaviour
     {
         Invoke("Restart", 1.5f);
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
