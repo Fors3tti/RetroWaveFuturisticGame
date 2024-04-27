@@ -1436,7 +1436,7 @@ PrefabInstance:
       objectReference: {fileID: 1365554308}
     - target: {fileID: 6703328676400499936, guid: 07716924f5e71e14b9c0c49609a4bb39, type: 3}
       propertyPath: lvlToLoad
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1997,7 +1997,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.93999386, y: 1.2765114, z: -10}
+  m_LocalPosition: {x: -0.9341383, y: 1.2765114, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
